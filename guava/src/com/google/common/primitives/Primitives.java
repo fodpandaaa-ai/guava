@@ -1,4 +1,4 @@
-/*
+
  * Copyright (C) 2007 The Guava Authors
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
@@ -10,7 +10,7 @@
  * is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
- */
+ 
 
 package com.google.common.primitives;
 
@@ -22,7 +22,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
 
-/**
+
  * Contains static utility methods pertaining to primitive types and their corresponding wrapper
  * types.
  *
@@ -33,17 +33,17 @@ import java.util.Set;
 public final class Primitives {
   private Primitives() {}
 
-  /** A map from primitive types to their corresponding wrapper types. */
+   A map from primitive types to their corresponding wrapper types. */
   // It's a constant, and we can't use ImmutableMap here without creating a circular dependency.
   @SuppressWarnings("ConstantCaseForConstants")
   private static final Map<Class<?>, Class<?>> PRIMITIVE_TO_WRAPPER_TYPE;
 
-  /** A map from wrapper types to their corresponding primitive types. */
+  A map from wrapper types to their corresponding primitive types. */
   // It's a constant, and we can't use ImmutableMap here without creating a circular dependency.
   @SuppressWarnings("ConstantCaseForConstants")
   private static final Map<Class<?>, Class<?>> WRAPPER_TO_PRIMITIVE_TYPE;
 
-  // Sad that we can't use a BiMap. :(
+  Sad that we can't use a BiMap.
 
   static {
     Map<Class<?>, Class<?>> primToWrap = new LinkedHashMap<>(16);
